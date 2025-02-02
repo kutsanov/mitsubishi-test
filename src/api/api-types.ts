@@ -7,7 +7,7 @@ type tTypeMethod =
 
 export type tQData = {
   method: tTypeMethod;
-  vehicleId: string;
+  vehicleId?: string;
   vin?: string;
   data?: any;
 };
@@ -52,9 +52,51 @@ export type tVehicle = {
   attributesAdv: tTable[];
 };
 
+export type tNodePart = {
+  hotspotId: string;
+  number: string;
+  name: string;
+  note?: string;
+  qty?: string;
+};
+
+export type tNodeHotspot = {
+  hotspotId: string;
+  top: number;
+  left: number;
+  width: number;
+  height: number;
+};
+
+export type tNodeImages = {
+  qImage: string;
+  width?: number;
+  height?: number;
+};
+
+export type tNode = {
+  name: string;
+  title?: string;
+  code?: string;
+  note?: string;
+  parts: tNodePart[];
+  hotspots: tNodeHotspot[];
+  images: tNodeImages[];
+  image_index?: number;
+  qGroup: string;
+};
+
+export type tListItem = {
+  title: string;
+  code?: string;
+  q: string;
+};
+
 export type tResult = {
   resultCode: number;
   vehicle?: tVehicle;
+  lists?: tListItem[];
+  node?: tNode;
 };
 
 export interface iQService {
