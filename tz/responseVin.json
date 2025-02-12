@@ -1,18 +1,6 @@
 {
   "resultCode": 200,
   "result": {
-    "params": {
-      "vin": "JMBXTGF3WDZ005150"
-    },
-    "resultCode": 200,
-    "vin": "JMBXTGF3WDZ005150",
-    "catalogs": [
-      {
-        "status": 200,
-        "time": 40,
-        "name": "mitsubishi"
-      }
-    ],
     "vehicle": {
       "vin": "JMBXTGF3WDZ005150",
       "vehicleId": "eyJuYW1lIjoidmVoaWNsZSIsInZpbiI6IkpNQlhUR0YzV0RaMDA1MTUwIiwibWFya2V0Q29kZSI6Ik02MCIsImNhdGFsb2dDb2RlIjoiQjYwQUI1MDBBIiwibW9kZWxDb2RlIjoiR0YzVyIsInR5cGUiOiJvZmZsaW5lIn0=",

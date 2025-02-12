@@ -100,5 +100,5 @@ export type tResult = {
 };
 
 export interface iQService {
-  run();
+  run(qData);
 }

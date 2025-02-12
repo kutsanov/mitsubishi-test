@@ -16,6 +16,12 @@ export class QService {
 
   async run(q: string) {
     const qData = this.qCreatorService.readQ(q);
+    const qData = {
+      method: "getMainGroup",
+      data: {
+        vin: 'dd',
+      },
+    };
     const method = qData.method;
     let model: iQService;
     switch (method) {
@@ -27,7 +33,7 @@ export class QService {
       throw new BadRequestException('Не определена модель');
     }
 
-    const ret = await model.run();
+    const ret = await model.run(qData.data);
 
     return ret;
   }
